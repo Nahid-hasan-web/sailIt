@@ -1,10 +1,6 @@
-"use client";
-
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import logo from "../../public/img/logo.png";
+import logo from "../../assets/img/logo.png";
 
-import Link from "next/link";
 import {
   HiChevronDown,
   HiOutlineMenu,
@@ -18,6 +14,7 @@ import {
   FaYoutube,
   FaInstagram
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const socialItems = [
   { socialIocn: FaFacebookF, socialLink: "#" },
@@ -163,8 +160,8 @@ export default function HeaderWithNavbar() {
       <div className="bg-white/90 backdrop-blur border-b border-neutral-200/70">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Image
+            <Link to="/" className="flex items-center gap-2">
+              <img
                 src={logo}
                 alt="Go Digital"
                 priority
@@ -220,7 +217,7 @@ export default function HeaderWithNavbar() {
                                 {item.children.map((c) => (
                                   <li key={c.label}>
                                     <Link
-                                      href={c.href}
+                                      to={c.href}
                                       className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] font-medium text-neutral-700 transition hover:bg-neutral-50 hover:text-brandColor"
                                       onClick={() => setOpenDesktop(null)}
                                     >
@@ -242,7 +239,7 @@ export default function HeaderWithNavbar() {
               </ul>
 
               <Link
-                href="/contact"
+                to="/contact"
                 className="ml-3 inline-flex w-30 px-3 py-2 items-center justify-center rounded-[5px] bg-brandColor text-[13px] font-semibold text-white shadow-sm hover:opacity-95 transition"
               >
                 Get a Quote
@@ -281,8 +278,8 @@ export default function HeaderWithNavbar() {
           }`}
         >
           <div className="flex items-center justify-between px-4 py-4 border-b border-neutral-200">
-            <Link href="/" onClick={closeMobile} className="flex items-center">
-              <Image
+            <Link to="/" onClick={closeMobile} className="flex items-center">
+              <img
                 src="/logo.png"
                 alt="Go Digital"
                 width={160}
@@ -311,7 +308,7 @@ export default function HeaderWithNavbar() {
                   <li key={item.label} className="py-1">
                     <div className="flex items-center justify-between">
                       <Link
-                        href={item.href}
+                        to={item.href}
                         className="flex-1 py-3 text-[15px] font-semibold text-neutral-900"
                         onClick={() => {
                           if (!hasChildren) closeMobile();
@@ -349,7 +346,7 @@ export default function HeaderWithNavbar() {
                             {item.children.map((c) => (
                               <li key={c.label}>
                                 <Link
-                                  href={c.href}
+                                  to={c.href}
                                   className="block py-2 pl-3 text-[13px] text-neutral-600 hover:text-brandColor"
                                   onClick={closeMobile}
                                 >
