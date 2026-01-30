@@ -207,7 +207,7 @@ export default function HeaderWithNavbar() {
                                 : "opacity-0 -translate-y-1 pointer-events-none"
                             }`}
                           >
-                            <div className="w-[280px] overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_50px_-25px_rgba(0,0,0,0.35)]">
+                            <div className="w-70 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_50px_-25px_rgba(0,0,0,0.35)]">
                               <div className="px-4 py-3 border-b border-neutral-100">
                                 <p className="text-[12px] font-semibold text-neutral-500">
                                   {item.label}
@@ -273,7 +273,7 @@ export default function HeaderWithNavbar() {
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-[88%] max-w-[380px] bg-white shadow-2xl transition-transform ${
+          className={`absolute right-0 top-0 h-full w-[88%] max-w-95 bg-white shadow-2xl transition-transform ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

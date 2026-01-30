@@ -7,7 +7,7 @@ export default function ServiceCard() {
       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="100"
-      className="w-full max-w-full rounded-xl bg-white px-5 py-8 text-center shadow-md transition hover:-translate-y-1 hover:shadow-lg sm:max-w-[280px] sm:px-6 sm:py-10"
+      className="w-full max-w-full rounded-xl bg-white px-5 py-8 text-center shadow-md transition hover:-translate-y-1 hover:shadow-lg sm:max-w-70 sm:px-6 sm:py-10"
     >
       {/* Icon */}
       <div
